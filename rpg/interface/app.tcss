@@ -1,0 +1,323 @@
+$rpg-bg: #0c0c0c;
+$rpg-panel: #16161a;
+$rpg-rule: #2a2a30;
+$rpg-fg: #cccccc;
+$rpg-muted: #767676;
+$rpg-green: #23d18b;
+$rpg-yellow: #f5f543;
+$rpg-red: #f14c4c;
+$rpg-cyan: #29b8db;
+
+Screen {
+    background: $rpg-bg;
+    color: $rpg-fg;
+    layout: vertical;
+}
+
+Footer {
+    background: $rpg-panel;
+    color: $rpg-muted;
+}
+
+FooterKey {
+    background: $rpg-panel;
+    color: $rpg-muted;
+}
+
+#page {
+    height: 1fr;
+    align: center middle;
+    overflow-y: auto;
+}
+
+#titleblock {
+    width: 60;
+    height: auto;
+}
+
+#titleblock > Center {
+    width: 100%;
+    height: auto;
+}
+
+#titleword {
+    width: 100%;
+    content-align: center middle;
+    color: $rpg-green;
+    text-style: bold;
+}
+
+#tagline {
+    width: 100%;
+    content-align: center middle;
+    color: $rpg-muted;
+    padding: 1 0;
+}
+
+OptionList {
+    background: $rpg-bg;
+    color: $rpg-fg;
+    border: round $rpg-rule;
+}
+
+#mainmenu {
+    width: 34;
+    height: auto;
+}
+
+#info {
+    width: 74;
+    padding: 1 3;
+    border: round $rpg-rule;
+    background: $rpg-bg;
+}
+
+#mailbox {
+    width: 80;
+    height: 90%;
+    border: round $rpg-rule;
+    background: $rpg-bg;
+}
+
+#mailheaders {
+    padding: 1 3 0 3;
+    background: $rpg-panel;
+}
+
+#mailrule {
+    height: 1;
+    background: $rpg-panel;
+    color: $rpg-rule;
+    padding: 0 3;
+}
+
+#mailbody {
+    padding: 1 3;
+}
+
+#book {
+    width: 76;
+    height: 90%;
+    border: double $rpg-rule;
+    background: $rpg-bg;
+    padding: 1 3;
+}
+
+#bookhead {
+    width: 100%;
+    content-align: center middle;
+    color: $rpg-yellow;
+    text-style: bold;
+    padding: 0 0 1 0;
+}
+
+#booknote {
+    color: $rpg-muted;
+    text-style: italic;
+    padding: 0 0 1 0;
+    border-bottom: solid $rpg-rule;
+}
+
+#bookbody {
+    padding: 1 0 0 0;
+}
+
+#hubbody {
+    height: 1fr;
+}
+
+#hubside {
+    width: 30;
+    padding: 1 2;
+    border-right: solid $rpg-rule;
+    color: $rpg-fg;
+}
+
+#hubmain {
+    width: 1fr;
+    padding: 1 2;
+}
+
+#questlist {
+    height: 1fr;
+}
+
+#mailscroll {
+    height: 1fr;
+}
+
+#header {
+    height: 1;
+    background: $rpg-panel;
+    color: $rpg-fg;
+    text-style: bold;
+}
+
+#body {
+    height: 1fr;
+}
+
+#sidebar {
+    width: 30;
+    border-right: solid $rpg-rule;
+}
+
+#sidebar > Static {
+    border: round $rpg-rule;
+    border-title-align: left;
+    border-title-color: $rpg-muted;
+    padding: 0 1;
+    height: auto;
+    background: $rpg-bg;
+}
+
+Terminal {
+    width: 1fr;
+}
+
+#scrollback {
+    height: 1fr;
+    padding: 0 1;
+    background: $rpg-bg;
+    color: $rpg-fg;
+}
+
+#inputline {
+    height: 1;
+    background: $rpg-panel;
+}
+
+#promptlabel {
+    width: auto;
+    color: $rpg-green;
+    background: $rpg-panel;
+}
+
+#cmdline {
+    width: 1fr;
+    height: 1;
+    border: none;
+    padding: 0;
+    background: $rpg-panel;
+    color: $rpg-fg;
+}
+
+#cmdline:focus {
+    border: none;
+}
+
+#debrief {
+    width: 64;
+    padding: 1 3;
+    border: round $rpg-rule;
+}
+
+#sidebar > TimerPanel {
+    dock: bottom;
+    border: round $rpg-rule;
+    border-title-align: left;
+    border-title-color: $rpg-muted;
+    padding: 0 1;
+    height: auto;
+    background: $rpg-bg;
+}
+
+ConfirmScreen {
+    align: center middle;
+}
+
+#confirm {
+    width: 56;
+    height: auto;
+    padding: 1 2;
+    border: round $rpg-red;
+    background: $rpg-bg;
+}
+
+#confirmq {
+    color: $rpg-fg;
+    text-style: bold;
+    padding: 0 0 1 0;
+}
+
+#confirmwarn {
+    color: $rpg-muted;
+    padding: 0 0 1 0;
+}
+
+#confirmchoice {
+    height: auto;
+    border: none;
+}
+
+NotesScreen {
+    align: center middle;
+}
+
+#notes {
+    width: 70;
+    height: 70%;
+    padding: 1 2;
+    border: round $rpg-rule;
+    background: $rpg-bg;
+}
+
+#noteshead {
+    color: $rpg-yellow;
+    text-style: bold;
+}
+
+#notesnote {
+    color: $rpg-muted;
+    padding: 0 0 1 0;
+}
+
+#notesarea {
+    height: 1fr;
+    border: round $rpg-rule;
+    background: $rpg-bg;
+}
+
+#secret {
+    width: 72;
+    height: 80%;
+    padding: 1 3;
+    border: double $rpg-yellow;
+    background: $rpg-bg;
+}
+
+#secrethead {
+    color: $rpg-yellow;
+    text-style: bold;
+    padding: 0 0 1 0;
+    border-bottom: solid $rpg-rule;
+}
+
+#secretscroll {
+    height: 1fr;
+    padding: 1 0 0 0;
+}
+
+#secretinput {
+    margin: 1 0 0 0;
+    border: round $rpg-rule;
+    background: $rpg-bg;
+    color: $rpg-fg;
+}
+
+#secreterror {
+    color: $rpg-red;
+    height: 1;
+}
+
+#primer {
+    width: 76;
+    height: 80%;
+    padding: 1 3;
+    border: round $rpg-rule;
+    background: $rpg-bg;
+}
+
+#primertext {
+    color: $rpg-fg;
+}
