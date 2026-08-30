@@ -19,38 +19,23 @@ Each quest runs inside a Docker-based Linux sandbox, giving players access to a 
 
 - Docker  
 - Python 3.12+
-- Textual
-- Rich
+- uv 
 
 ## Installation 
+Clone the repository and run:
 
-### Linux/Mac
+### Linux/Mac & Windows
 
 ```
-python3.12 -m venv .venv
-
-source .venv/bin/activate
-
-pip install -r requirements.txt
+uv sync
 
 docker build --no-cache --network=none -t terminal-rpg-sandbox rpg/sandbox/image
 
-python3.12 play.py
+uv run play.py
 ```
 
-### Windows
+`uv` automatically manages the Python virtual environment and project dependencies. You do not need to manually create or activate a virtual environment or install dependencies with pip.
 
-```
-python -m venv .venv
-
-.venv\Scripts\activate
-
-python pip install -r requirements.txt
-
-docker build --no-cache --network=none -t terminal-rpg-sandbox rpg/sandbox/image
-
-python play.py
-```
 ## Manual Installation 
 
 - Run Docker
