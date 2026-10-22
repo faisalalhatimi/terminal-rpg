@@ -91,7 +91,9 @@ If you prefer to install the dependencies manually, follow these steps.
 
    ```bash
    python play.py
-   ```## Known Problems
+   ```
+   
+## Known Problems
 
 ### Docker network error while building
 
