@@ -21,31 +21,77 @@ Each quest runs inside a Docker-based Linux sandbox, giving players access to a 
 - Python 3.12+
 - uv 
 
-## Installation 
-Clone the repository and run:
+### Setup
 
-### Linux/Mac & Windows
+Clone the repository and navigate to the project directory.
 
+```bash
+git clone https://github.com/faisalalhatimi/terminal-rpg.git
+cd terminal-rpg
 ```
+
+Install the project dependencies:
+
+```bash
 uv sync
+```
 
+Build the Docker image used by the game:
+
+```bash
 docker build --no-cache --network=none -t terminal-rpg-sandbox rpg/sandbox/image
+```
 
+Start the game:
+
+```bash
 uv run play.py
 ```
 
-`uv` automatically manages the Python virtual environment and project dependencies. You do not need to manually create or activate a virtual environment or install dependencies with pip.
+`uv` manages the Python virtual environment and project dependencies. You do not need to create or activate a virtual environment manually or install dependencies using `pip`.
 
-## Manual Installation 
+## Manual Installation
 
-- Run Docker
-- Make a virtual environment `venv` using python 3.12+
-- Activate the virtual environment using `.venv\Scripts\activate`(Windows) or `source .venv/bin/activate`(Linux/Mac)
-- Install dependencies using `pip install -r requirements.txt`
-- Build a docker image using the `Dockerfile` from `rpg/sandbox/image` use `--no-cache` and `--network=none` flags 
--  Run the game using `play.py`
+If you prefer to install the dependencies manually, follow these steps.
 
-## Known Problems
+1. Install Python 3.12 or later and Docker.
+2. Create a virtual environment:
+
+   ```bash
+   python -m venv .venv
+   ```
+
+3. Activate the virtual environment.
+
+   **Windows:**
+
+   ```powershell
+   .venv\Scripts\activate
+   ```
+
+   **Linux/macOS:**
+
+   ```bash
+   source .venv/bin/activate
+   ```
+
+4. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Build the Docker image:
+
+   ```bash
+   docker build --no-cache --network=none -t terminal-rpg-sandbox rpg/sandbox/image
+   ```
+
+6. Start the game:
+
+   ```bash
+   python play.py
+   ```## Known Problems
 
 ### Docker network error while building
 
